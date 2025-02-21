@@ -61,7 +61,7 @@ const updateBookData=async (id,dataToBeUpdated) => {
     throw error
   }
 }
-app.post("/books/:id",async (req,res) => {
+app.put("/books/:id",async (req,res) => {
   try {
     const updated=await updateBookData(req.params.id,req.body)
     if(updated){
